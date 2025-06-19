@@ -1,0 +1,36 @@
+<section class="update-contact">
+  <h1>Update Contact (Because People Keep Changing Their Numbers Like Socks)</h1>
+  <article>
+    <form action="/api/edit/{{payload._id}}" method="post">
+      
+      <div class="con-group">
+        <label for="fname">First Name (Yes, spell it right this time):</label>
+        <input type="text" name="fname" id="fname" value="{{payload.fname}}" required>
+      </div>
+
+      <div class="con-group">
+        <label for="lname">Last Name (Still the same, hopefully):</label>
+        <input type="text" name="lname" id="lname" value="{{payload.lname}}" required>
+      </div>
+
+      <div class="con-group">
+        <label for="nmbr">Contact Number (Try not to typo this again):</label>
+        <input type="number" name="nmbr" id="nmbr" value="{{payload.nmbr}}" required>
+      </div>
+
+      <div class="con-group">
+        <label for="loc">Where'd You Save This?</label>
+        <select name="loc" id="loc" value="{{payload.loc}}">
+          <option value="mobile">Mobile</option>
+          <option value="sim">Sim</option>
+          <option value="email">Email</option>
+        </select>
+      </div>
+
+      <div class="con-group">
+        <button type="submit">Update Like a Boss</button>
+      </div>
+
+    </form>
+  </article>
+</section>

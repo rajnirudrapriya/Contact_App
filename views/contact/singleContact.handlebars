@@ -1,0 +1,14 @@
+<h1>Contact Details (For That One Person You Might Actually Text Back)</h1>
+
+{{#if payload}}
+<div class="contact-detail">
+  <ul>
+    <li class="info">👤 First Name: {{payload.fname}}</li>
+    <li class="info">👤 Last Name: {{payload.lname}}</li>
+    <li class="info">📞 Number: {{payload.nmbr}}</li>
+    <li class="info">📍 Saved In: {{payload.loc}} (Because of course you forget where things go)</li>
+  </ul>
+</div>
+{{else}}
+<h1 class="no-contacts">Well this is awkward... No contact found. Go make one, social butterfly.</h1>
+{{/if}}

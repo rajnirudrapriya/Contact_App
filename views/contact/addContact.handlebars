@@ -1,0 +1,25 @@
+  <div class="form-wrapper">
+  <div class="add-contact-container">
+    <h1>Add a Contact (As if You’ll Ever Call)</h1>
+    <form class="contact-form" action="/api/addContact" method="post">
+      <label for="fname">First Name</label>
+      <input type="text" name="fname" id="fname" placeholder="Like, their actual name?" required />
+
+      <label for="lname">Last Name</label>
+      <input type="text" name="lname" id="lname" placeholder="Optional... like your effort" required />
+
+      <label for="nmbr">Contact Number</label>
+      <input type="tel" name="nmbr" id="nmbr" placeholder="Numbers only. No emoji." required />
+
+      <label for="loc">Location</label>
+      <select name="loc" id="loc" required>
+        <option value="">Select where you'll lose it</option>
+        <option value="sim">SIM (because who still uses that?)</option>
+        <option value="mobile">Phone (until it breaks)</option>
+        <option value="email">Email (good luck finding it)</option>
+      </select>
+
+      <button type="submit">Save This Masterpiece</button>
+    </form>
+  </div>
+</div>

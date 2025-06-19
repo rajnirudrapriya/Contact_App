@@ -1,0 +1,32 @@
+<section class="conlist">
+  <article>
+    <h1>Contact List (Because Apparently You're Popular Now)</h1>
+
+    {{#each payload}}
+    {{!-- Oh look, another name you'll forget to text back --}}
+    <div class="c2">
+      <ul>
+        <li><strong>First Name:</strong> {{this.fname}}</li>
+        <li><strong>Last Name:</strong> {{this.lname}}</li>
+      </ul>
+
+      <li class="btn-group">
+        <span>
+          <a href="/api/{{this._id}}" class="cntInfo">Stalk—I mean, View</a>
+        </span>
+        <span>
+          <a href="/api/edit/{{this._id}}" class="edit">Fix the Typos</a>
+        </span>
+        <span>
+          <a href="/api/delete/{{this._id}}" class="delete">Delete Like a Cold Hearted Ex</a>
+        </span>
+      </li>
+      <br><br>
+    </div>
+
+    {{else}}
+    <h1>No Contacts Available. It's just you and your regrets here.</h1>
+    {{/each}}
+
+  </article>
+</section>
