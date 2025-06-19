@@ -1,0 +1,61 @@
+.update-contact {
+  font-family: 'Montserrat', sans-serif;
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #fff3e0;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.update-contact article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.update-contact ~ h1,
+.update-contact h1 {
+  text-align: center;
+  color: #333;
+  font-size: 1.8rem;
+  margin: 2rem auto 1.5rem;
+  max-width: 600px;
+  font-weight: 700;
+}
+
+.update-contact .con-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.update-contact label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.update-contact input,
+.update-contact select {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.update-contact button {
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-contact button:hover {
+  background-color: #e85c50;
+}
