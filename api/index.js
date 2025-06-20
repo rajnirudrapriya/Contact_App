@@ -1,4 +1,4 @@
 const serverless = require('serverless-http');
-const app = require('../server'); // server.js ko import kiya
+const app = require('../server');
 
 module.exports.handler = serverless(app);
