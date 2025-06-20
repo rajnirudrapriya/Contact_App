@@ -4,26 +4,25 @@ require('dotenv').config();
 const { connectDb } = require("./config/db");
 const routing = require("./router/contactRouter");
 const { engine } = require('express-handlebars');
-let PORT = process.env.PORT;
 
+// Template engine
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
-
-connectDb();
-
-app.use(express.urlencoded({ extended: true }));
-app.use("/api", routing);
 app.use(express.static("public"));
 
+// Middleware
+app.use(express.urlencoded({ extended: true }));
+app.use("/api", routing);
+
+// DB Connect
+connectDb();
+
+// Home Route
 app.get('/', (req, res) => {
-    res.render('home', { title: "homepage", css: "home" });
+  res.render('home', { title: "homepage", css: "home" });
 });
 
-// ❌ REMOVE THIS PART 👇
-// app.listen(PORT, err => {
-//     if (err) throw err;
-//     console.log("Server is running on port 5000");
-// });
+// ✅ DO NOT USE app.listen()
 
-// ✅ ADD THIS INSTEAD 👇
+// ✅ Instead, export the app
 module.exports = app;
